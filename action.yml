@@ -1,0 +1,16 @@
+name: 'Unity-style Metagen'
+description: >-
+  Automatically create and manage Unity-style .meta files
+  within specific directories of the repository
+inputs:
+  directory:  # id of input
+    description: 'Sub-path in which to sync .meta files'
+    required: true
+runs:
+  using: 'docker'
+  image: 'docker://wbserver/metagen:1.0.7'
+  args:
+    - ${{ inputs.directory }}
+branding:
+  icon: 'file-plus'
+  color: 'green'
