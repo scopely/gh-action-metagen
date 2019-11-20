@@ -20,7 +20,7 @@ with:
 ## Deploy process
 
 ```sh
-MetagenVersion=1.0.7 # UPDATE ME
+MetagenVersion=1.0.10 # UPDATE ME
 docker build . \
   --build-arg MetagenVersion=$MetagenVersion \
   -t wbserver/metagen:$MetagenVersion
